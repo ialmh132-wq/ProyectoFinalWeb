@@ -1,0 +1,321 @@
+:root {
+    --sky-1: #e6f2ff;
+    --sky-2: #cfe9ff;
+    --navy: #093a66;
+    --accent: #0b84ff;
+    --muted: #6b7785;
+}
+
+* {
+    box-sizing: border-box
+}
+
+
+/* Centered page helper for inscripcion */
+.centered header .hero,
+.centered .hero {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+}
+.centered nav{justify-content:center}
+.centered section{display:flex;flex-direction:column;align-items:center;text-align:center}
+.centered section h2{margin-bottom:12px}
+.centered section button{margin:14px auto}
+.centered .logo{margin:0 auto 12px}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    margin: 0;
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    background: linear-gradient(180deg, var(--sky-1), var(--sky-2));
+    color: #14202b;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Header / Hero */
+header {
+    
+    background: linear-gradient(135deg, rgba(11, 132, 255, 0.12), rgba(9, 58, 102, 0.18));
+    padding: px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+header h1 {
+    margin: 0;
+    color: var(--navy);
+    font-size: clamp(22px, 4vw, 40px);
+    letter-spacing: 0.6px;
+}
+
+header p {
+    margin: 8px 0 0;
+    color: var(--muted)
+}
+
+/* Logo styling (used in all page headers) */
+/* Logo styling (used in all page headers) */
+header .logo{
+    position:fixed;
+    top:18px;
+    left:18px;
+    height:64px;
+    width:auto;
+    max-width:180px;
+    margin:0;
+    z-index:100;
+    background:#fff;
+    border-radius:12px;
+    box-shadow:0 4px 18px rgba(9,58,102,0.08);
+    opacity:0.92;
+    transition:transform .18s ease,opacity .18s ease;
+    filter:grayscale(6%);
+}
+header .logo-link{display:inline-block}
+header .logo-link:hover .logo{opacity:1;transform:translateY(-3px)}
+@media(max-width:480px){header .logo{height:48px;margin-bottom:12px}}
+
+/* Subtle title on homepage */
+.home .hero h1{opacity:0.86}
+
+/* subtle plane contrails using pseudo-element */
+header::after {
+    content: '';
+    position: absolute;
+    top: -30%;
+    left: -10%;
+    width: 220%;
+    height: 80%;
+    background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.18), transparent 10%),
+        radial-gradient(circle at 70% 60%, rgba(255, 255, 255, 0.10), transparent 10%);
+    transform: rotate(-12deg);
+    opacity: 0.9;
+    pointer-events: none;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    padding: 12px 20px;
+    background: transparent;
+}
+
+nav a {
+    color: var(--navy);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all .18s ease;
+}
+
+nav a:hover {
+    background: rgba(11, 132, 255, 0.12);
+    transform: translateY(-2px)
+}
+
+/* Main content cards */
+section {
+    max-width: 1100px;
+    margin: 32px auto;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(250, 250, 252, 0.9));
+    padding: 28px;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(16, 40, 70, 0.06);
+}
+
+h2 {
+    color: var(--navy);
+    margin-top: 0
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px
+}
+
+@media(min-width:820px) {
+    .grid {
+        grid-template-columns: 1fr 360px
+    }
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    box-shadow: 0 8px 24px rgba(9, 58, 102, 0.08)
+}
+
+/* Buttons with wing icon */
+button {
+    background: linear-gradient(90deg, var(--accent), #0b5bd6);
+    color: white;
+    border: 0;
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 8px 18px rgba(11, 84, 182, 0.18);
+}
+
+button::after {
+    content: '✈';
+    font-size: 14px;
+    opacity: 0.95
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 30px rgba(11, 84, 182, 0.18)
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(90deg, var(--navy), #0b4a86);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    margin-top: 20px
+}
+
+/* Utility */
+.muted {
+    color: var(--muted)
+}
+
+.pill {
+    display: inline-block;
+    padding: 6px 10px;
+    background: rgba(11, 132, 255, 0.08);
+    color: var(--navy);
+    border-radius: 999px;
+    font-weight: 600
+}
+
+/* Accessibility: focus states */
+a:focus,
+button:focus {
+    outline: 3px solid rgba(11, 132, 255, 0.18);
+    outline-offset: 3px
+}
+
+/* Small tweaks for specific pages */
+section p {
+    line-height: 1.6;
+    color: #374151
+}
+
+/* Center texts for homepage */
+.home section{display:flex;flex-direction:column;align-items:center;text-align:center}
+.home section p{max-width:880px}
+.home section ul{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.home section ul li{display:inline-block;background:rgba(9,58,102,0.06);padding:8px 12px;border-radius:8px}
+.home img{max-width:720px}
+
+ul {
+    padding-left: 18px;
+    color: #2b3d4a
+}
+
+/* Image gallery style */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px
+}
+
+.hero {
+background: url("imagenes/fondo.jpg") center/cover no-repeat;
+color: white;
+padding: 30px 40px;
+text-align: center;
+position: relative;
+}
+
+.hero::before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: transparent;
+}
+
+.hero h1,
+.hero p {
+position: relative;
+z-index: 1;
+}
+
+section {
+background: rgba(255,255,255,0.95);
+}
+
+/* Global aeronautical decorative background */
+body{
+    position:relative; /* create stacking context for pseudo-elements */
+}
+body::before{
+    /* large faint plane silhouette */
+    content:'✈';
+    position:fixed;
+    right:6%;
+    top:-10%;
+    font-size:320px;
+    color:var(--navy);
+    opacity:0.04;
+    transform:rotate(-22deg);
+    pointer-events:none;
+    z-index:0;
+    mix-blend-mode:normal;
+}
+
+
+/* Add FTEJerez watermark using a pseudo-element on the body root for better control */
+body .fte-watermark{display:none}
+/* fallback: show watermark via fixed img if available */
+body::marker{}
+/* Insert logo as an additional fixed background using a separate rule */
+@supports (background-image: url("imagenes/logo.png")){
+    body::after{
+        background-image:
+            radial-gradient(circle at 10% 20%, rgba(255,255,255,0.07) 0%, transparent 20%),
+            radial-gradient(circle at 80% 60%, rgba(255,255,255,0.05) 0%, transparent 22%),
+            repeating-linear-gradient(180deg, rgba(255,255,255,0.01) 0 2px, transparent 2px 40px),
+            linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0)),
+            url("imagenes/logo.png");
+        background-repeat: no-repeat;
+        background-position: 8% 78%;
+        background-size: 260px;
+        opacity:1;
+    }
+}
+
+/* Ensure key page elements sit above decorative layers */
+header, nav, section, footer{position:relative;z-index:1}
+
+/* Card adjustments when body has layered background */
+section{background:rgba(255,255,255,0.96)}
+
+@media(max-width:480px){
+    body::before{font-size:180px;right:2%;top:6%;opacity:0.06}
+}
