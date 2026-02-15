@@ -1,3 +1,54 @@
+/* Calendario de actividades */
+.calendar-container {
+    display: flex;
+    justify-content: center;
+    margin: 32px 0 24px 0;
+}
+
+.calendar {
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 2px 16px rgba(9,58,102,0.08);
+    border-radius: 12px;
+    overflow: hidden;
+    min-width: 320px;
+    max-width: 700px;
+    width: 100%;
+    font-size: 1rem;
+}
+.calendar th, .calendar td {
+    padding: 10px 16px;
+    text-align: left;
+}
+.calendar th {
+    background: var(--sky-2);
+    color: var(--navy);
+    font-weight: 600;
+    border-bottom: 2px solid var(--accent);
+}
+.calendar tr:nth-child(even) td {
+    background: #f6faff;
+}
+.calendar tr:nth-child(odd) td {
+    background: #fff;
+}
+.calendar td {
+    color: #14202b;
+    border-bottom: 1px solid #e6f2ff;
+}
+.calendar tr:last-child td {
+    border-bottom: none;
+}
+@media (max-width: 600px) {
+    .calendar th, .calendar td {
+        padding: 7px 6px;
+        font-size: 0.95em;
+    }
+    .calendar {
+        min-width: 0;
+        font-size: 0.95em;
+    }
+}
 :root {
     --sky-1: #e6f2ff;
     --sky-2: #cfe9ff;
@@ -248,6 +299,12 @@ color: white;
 padding: 30px 40px;
 text-align: center;
 position: relative;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
 }
 
 .hero::before {
