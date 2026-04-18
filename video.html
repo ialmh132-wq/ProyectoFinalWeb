@@ -1,48 +1,65 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="es">
 <head>
-    <title>Calendario</title>
+    <meta charset="UTF-8">
+    <title>Vídeos Explicativos - FTEJerez 2026</title>
     <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <a id="top"></a>
-    <header>
-        <div class="hero">
-            <a href="index.html" class="logo-link"><img class="logo" src="imagenes/logo.png" alt="FTEJerez logo"></a>
-            <h1>Vídeos explicativos</h1>
-            <p class="muted">Actividades programadas del evento</p>
+
+    <header class="hero-section">
+        <a href="index.html">
+            <img src="imagenes/logo.png" class="logo" alt="Logo FTEJerez">
+        </a>
+        <div class="hero-content">
+            <h1>Vídeos <span class="highlight">Explicativos</span></h1>
+            <p>Conoce los detalles técnicos y operativos del evento</p>
         </div>
     </header>
+
     <nav>
         <a href="index.html">Inicio</a>
         <a href="evento.html">Evento</a>
         <a href="programa.html">Programa</a>
         <a href="calendario.html">Calendario</a>
         <a href="video.html">Vídeos</a>
-        <a href="enlaces.html">Enlaces de interés</a>
+        <a href="enlaces.html">Enlaces</a>
         <a href="localizacion.html">Localización</a>
         <a href="inscripcion.html">Inscripción</a>
     </nav>
-    <section>
-        <h2>Vídeos explicativos</h2>
-        <div class="video-container">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/9SFy1-4dtDE?si=TRVWqcM6kPa_ts9W"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/VPxfw99090E?si=nNe_N9q89m_EsDuT"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
 
-    </section>
-    <p style="margin-top:20px; text-align:center;">
-        <a href="#top" style="color:#0b3d6d; text-decoration:none;">↑ Volver arriba</a>
+    <main>
+        <section class="video-section-container">
+            <div class="video-grid">
+                
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/9SFy1-4dtDE" title="Video 1" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <h3>FTEJerez</h3>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/VPxfw99090E" title="Video 2" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <h3>Simuladores</h3>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <p style="text-align:center; margin-top: 40px;">
+        <a href="#top" style="color:#003057; text-decoration:none; font-weight:bold;">↑ Volver arriba</a>
     </p>
-    <footer>Calendario del evento</footer>
-</body>
 
+    <footer>
+        <p>Proyecto académico FTEJerez 2026</p>
+    </footer>
+</body>
 </html>

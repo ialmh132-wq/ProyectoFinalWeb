@@ -1,16 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Inscripción</title>
+    <meta charset="UTF-8">
+    <title>Inscripción - FTEJerez 2026</title>
     <link rel="stylesheet" href="estilo.css">
-    </head>
-<body class="centered">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
     <a id="top"></a>
-    <header>
-        <div class="hero">
-            <a href="index.html" class="logo-link"><img class="logo" src="imagenes/logo.png" alt="FTEJerez logo"></a>
-            <h1>Inscripción</h1>
-            <p class="muted">Regístrate para participar</p>
+
+    <header class="hero-section">
+        <a href="index.html">
+            <img src="imagenes/logo.png" class="logo" alt="Logo FTEJerez">
+        </a>
+        <div class="hero-content">
+            <h1>Únete a la <span class="highlight">Competición</span></h1>
+            <p>Asegura tu plaza para el evento aeronáutico del año</p>
         </div>
     </header>
 
@@ -20,23 +27,40 @@
         <a href="programa.html">Programa</a>
         <a href="calendario.html">Calendario</a>
         <a href="video.html">Vídeos</a>
-        <a href="enlaces.html">Enlaces de interés</a>
+        <a href="enlaces.html">Enlaces</a>
         <a href="localizacion.html">Localización</a>
         <a href="inscripcion.html">Inscripción</a>
     </nav>
 
-    <section>
-        <h2>Inscripción</h2>
+    <main>
+        <section class="inscripcion-container">
+            <div class="inscripcion-card">
+                <div class="icon-v2"><i class="fa-solid fa-file-signature"></i></div>
+                <h2>Formulario de Registro</h2>
+                <p>Para participar en las pruebas técnicas y el acceso a simuladores, es obligatorio completar el formulario oficial de Google Forms.</p>
+                
+                <div class="info-registro">
+                    <span><i class="fa-solid fa-check"></i> Plazas limitadas</span>
+                    <span><i class="fa-solid fa-check"></i> Verificación técnica</span>
+                </div>
 
-        <a href="https://forms.gle/o2Uo9DTBgZgbpikMA" target="_blank">
-            <button>Ir al formulario</button>
-        </a>
-    </section>
+                <div class="cta-inscripcion">
+                    <a href="https://forms.gle/o2Uo9DTBgZgbpikMA" target="_blank" rel="noopener" class="btn-google">
+                        Ir al formulario oficial <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <p class="nota-muted">Serás redirigido a una plataforma externa segura.</p>
+            </div>
+        </section>
+    </main>
 
-    <p style="margin-top:20px; text-align:center;">
-        <a href="#top" style="color:#0b3d6d; text-decoration:none;">↑ Volver arriba</a>
+    <p style="text-align:center; margin-top: 40px;">
+        <a href="#top" style="color:#003057; text-decoration:none; font-weight:bold;">↑ Volver arriba</a>
     </p>
 
-    <footer>Inscripción</footer>
+    <footer>
+        <p>Inscripción Oficial FTEJerez 2026</p>
+    </footer>
 </body>
 </html>

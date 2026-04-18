@@ -1,45 +1,75 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="es">
 <head>
-    <title>Calendario</title>
+    <meta charset="UTF-8">
+    <title>Enlaces de Interés - FTEJerez 2026</title>
     <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <a id="top"></a>
-    <header>
-        <div class="hero">
-            <a href="index.html" class="logo-link"><img class="logo" src="imagenes/logo.png" alt="FTEJerez logo"></a>
-            <h1>Calendario</h1>
-            <p class="muted">Actividades programadas del evento</p>
+
+    <header class="hero-section">
+        <a href="index.html">
+            <img src="imagenes/logo.png" class="logo" alt="Logo FTEJerez">
+        </a>
+        <div class="hero-content">
+            <h1>Enlaces de <span class="highlight">Interés</span></h1>
+            <p>Accede a las webs oficiales de nuestros colaboradores</p>
         </div>
     </header>
+
     <nav>
         <a href="index.html">Inicio</a>
         <a href="evento.html">Evento</a>
         <a href="programa.html">Programa</a>
         <a href="calendario.html">Calendario</a>
         <a href="video.html">Vídeos</a>
-        <a href="enlaces.html">Enlaces de interés</a>
+        <a href="enlaces.html">Enlaces</a>
         <a href="localizacion.html">Localización</a>
         <a href="inscripcion.html">Inscripción</a>
-        
     </nav>
-    <section>
-        <h2>Enlaces de interés</h2>
-        <div style="display: flex; flex-direction: column; gap: 18px; align-items: flex-start; max-width: 320px; margin: 0 auto;">
-            <a href="https://www.ftejerez.es/" target="_blank" rel="noopener" style="width:100%;"><button style="width:100%;">FTE Jerez</button></a>
-            <a href="https://www.vueling.com/es/" target="_blank" rel="noopener" style="width:100%;"><button style="width:100%;">Vueling</button></a>
-            <a href="https://www.iberia.com/" target="_blank" rel="noopener" style="width:100%;"><button style="width:100%;">Iberia</button></a>
+
+<main>
+    <section class="enlaces-section">
+        <div class="enlaces-grid">
+            
+            <a href="https://www.ftejerez.es/" target="_blank" rel="noopener" class="enlace-card">
+                <div class="enlace-logo-wrapper">
+                    <img src="imagenes/logo.png" alt="Logo FTEJerez" class="empresa-logo">
+                </div>
+                <h3>FTEJerez</h3>
+                <p>Web oficial de la academia</p>
+            </a>
+
+            <a href="https://www.vueling.com/es/" target="_blank" rel="noopener" class="enlace-card">
+                <div class="enlace-logo-wrapper">
+                    <img src="imagenes/Vueling Logo.png" alt="Logo Vueling" class="empresa-logo">
+                </div>
+                <h3>Vueling</h3>
+                <p>Portal de selección de pilotos</p>
+            </a>
+
+            <a href="https://www.iberia.com/" target="_blank" rel="noopener" class="enlace-card">
+                <div class="enlace-logo-wrapper">
+                    <img src="imagenes/Iberia Logo.jpg" alt="Logo Iberia" class="empresa-logo">
+                </div>
+                <h3>Iberia</h3>
+                <p>Programas de cadetes y empleo</p>
+            </a>
+
         </div>
-
-
     </section>
-    <p style="margin-top:20px; text-align:center;">
-        <a href="#top" style="color:#0b3d6d; text-decoration:none;">↑ Volver arriba</a>
-    </p>
-    <footer>Calendario del evento</footer>
-</body>
+</main>
 
+    <p style="text-align:center; margin-top: 40px;">
+        <a href="#top" style="color:#003057; text-decoration:none; font-weight:bold;">↑ Volver arriba</a>
+    </p>
+
+    <footer>
+        <p>Proyecto académico FTEJerez 2026</p>
+    </footer>
+</body>
 </html>

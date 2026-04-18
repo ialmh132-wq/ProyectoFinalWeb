@@ -1,39 +1,59 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="es">
 <head>
-    <title>Calendario</title>
+    <meta charset="UTF-8">
+    <title>Calendario - FTEJerez 2026</title>
     <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <a id="top"></a>
-    <header>
-        <div class="hero">
-            <a href="index.html" class="logo-link"><img class="logo" src="imagenes/logo.png" alt="FTEJerez logo"></a>
-            <h1>Calendario</h1>
-            <p class="muted">Actividades programadas del evento</p>
+
+    <header class="hero-section">
+        <a href="index.html">
+            <img src="imagenes/logo.png" class="logo" alt="Logo FTEJerez">
+        </a>
+        <div class="hero-content">
+            <h1>Calendario <span class="highlight">FTEJerez</span></h1>
+            <p>Planifica tu asistencia al evento</p>
         </div>
     </header>
+
     <nav>
         <a href="index.html">Inicio</a>
         <a href="evento.html">Evento</a>
         <a href="programa.html">Programa</a>
         <a href="calendario.html">Calendario</a>
         <a href="video.html">Vídeos</a>
-        <a href="enlaces.html">Enlaces de interés</a>
+        <a href="enlaces.html">Enlaces</a>
         <a href="localizacion.html">Localización</a>
         <a href="inscripcion.html">Inscripción</a>
     </nav>
 
-    <div style="display: flex; flex-direction: column; gap: 18px; align-items: center; max-width: 320px; margin: 32px auto 0 auto;">
-        <a href="https://calendar.google.com/calendar/embed?src=c_ba16391dfbf928b68353ef590f967f7d26e7892729fe5c15fef5392b8f279f6d%40group.calendar.google.com&ctz=Europe%2FMadrid" target="_blank" rel="noopener" style="width:100%;"><button style="width:100%;">Ver calendario en Google</button></a>
-    </div>
-    </div>
-    <p style="margin-top:20px; text-align:center;">
-        <a href="#top" style="color:#0b3d6d; text-decoration:none;">↑ Volver arriba</a>
-    </p>
-    <footer>Calendario del evento</footer>
-</body>
+    <main>
+        <section class="calendario-container">
+            <div class="header-calendario">
+                <div class="icon-v2"><i class="fa-solid fa-calendar-days"></i></div>
+                <h2>Calendario Interactivo</h2>
+                <p>Haz clic en el botón de abajo para añadir las fechas a tu dispositivo o consultar el calendario oficial en tiempo real.</p>
+            </div>
 
+            <div class="cta-calendar-box">
+                <a href="https://calendar.google.com/calendar/embed?src=c_ba16391dfbf928b68353ef590f967f7d26e7892729fe5c15fef5392b8f279f6d%40group.calendar.google.com&ctz=Europe%2FMadrid" target="_blank" rel="noopener" class="btn-google">
+                    <i class="fa-brands fa-google"></i> Ver calendario en Google
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <p style="text-align:center; margin-top: 40px;">
+        <a href="#top" style="color:#003057; text-decoration:none; font-weight:bold;">↑ Volver arriba</a>
+    </p>
+
+    <footer>
+        <p>Proyecto académico FTEJerez 2026</p>
+    </footer>
+</body>
 </html>
